@@ -1,9 +1,9 @@
 import json
 import os
+import psycopg2
 from typing import Optional, Dict, Any
 from threading import Lock
 from datetime import datetime
-import psycopg2
 
 class Database:
     def __init__(self, filepath: str = "server_settings.json", pg_conn_str: str = None):
