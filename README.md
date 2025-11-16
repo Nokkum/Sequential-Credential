@@ -47,7 +47,7 @@ project_root/
 ```
 
 # Installation
-```yaml
+```bash
 git clone <repo-url>
 cd sequential-credential-manager
 python -m venv venv
@@ -58,7 +58,7 @@ pip install -r requirements.txt
 
 # Environment Variables
 - **MASTER_PASSWORD**: Optional environment variable for the master password
-```python
+```bash
 # Linux/macOS
 export MASTER_PASSWORD="your-strong-password"
 
@@ -67,7 +67,7 @@ $env:MASTER_PASSWORD="your-strong-password"
 ```
 
 # Quick Start
-```python
+```bash
 python main.py
 ```
 
@@ -77,6 +77,36 @@ python main.py
 
 # CLI Utilities
 - Migration Helper (file system ↓ DB):
-```python
+```bash
 python -m core.migration --migrate
 ```
+
+# Usage Examples
+- **Python imports via package interface**:
+```python
+from core import Database, EncryptionManager, ConfigManager, migrate_filesystem_to_db
+
+db = Database()
+enc = EncryptionManager("my_master_password")
+cfg = ConfigManager(db, enc)
+```
+- **Secure clipboard copy**:
+```python
+from core.secure_memory import secure_copy
+
+secure_copy("my-secret-token", timeout=10)
+```
+
+# Dependencies
+- `cryptography` – encryption
+- `psycopg2-binary` – optional Postgres support
+- `tkinter` – GUI
+- `pyperclip` – clipboard operations
+- `requests` – token validation
+- `jwt (PyJWT)` – JWT generation
+- `PIL / pystray` – optional tray icon support
+
+# Security Considerations
+- Always use a strong master password.
+- Clipboard auto-wipe reduces exposure but cannot guarantee OS-level protection.
+- Role-based access is scaffold only; integrate with an authentication backend for multi-user setups.
