@@ -1,6 +1,5 @@
 import os
 from typing import List
-from core.profiles import list_profiles, set_active_profile
 
 class ProfileManager:
     BASE = '.sequential/profiles'
