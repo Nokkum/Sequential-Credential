@@ -37,6 +37,9 @@ project_root/
 └─ core/
    ├─ __init__.py        
    ├─ security.py        # EncryptionManager
+   ├─ audit.py
+   ├─ backup.py
+   ├─ cli.py
    ├─ database.py        # JSON + SQLite + optional Postgres storage
    ├─ configs.py         # Filesystem credential management
    ├─ migration.py       # Filesystem → DB migration
