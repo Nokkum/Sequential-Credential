@@ -30,7 +30,7 @@ project_root/
 ├─ LICENSE
 ├─ README.md
 ├─ gui/
-   ├─ 
+│  ├─ __init__.py
 │  ├─ app.py             # Main GUI logic
 │  └─ tray.py            # Optional system tray scaffold
 │
