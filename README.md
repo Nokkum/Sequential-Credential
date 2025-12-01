@@ -28,9 +28,7 @@
 - Theme preference persists between sessions
 - System tray support (when pystray is available) - minimize to tray with quick access menu
 
-## Features
 
-- **Master-Password Encryption**: All credent
 ## Features
 
 - **Master-Password Encryption**: All credentials are encrypted with a master password using modern cryptography (Fernet + PBKDF2).
