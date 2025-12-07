@@ -46,7 +46,7 @@ project_root/
 ├─ LICENSE
 ├─ README.md
 ├─ docs/
-│  └─ Changes.md         # Changelogs
+│  └─ changelogs.md      # Changelogs
 │
 ├─ gui/
 │  ├─ __init__.py
