@@ -9,7 +9,7 @@
 
 ## Changes
 - ### Version 1.5
-- **secure_memory** - Memory protection with automatic zeroization and mlock support
+- **secure_memory** - Memory protection with automatic zeroization and `mlock()` support
 - **scanner** - Fast secret scanning with regex patterns (Google API, OpenAI, GitHub, Discord tokens)
 - **security** - Encryption manager with Argon2id key derivation (upgraded from PBKDF2) and AES-256-GCM encryption
 - **crypto_advanced** - HKDF key derivation and AES key wrapping for per-provider keys
