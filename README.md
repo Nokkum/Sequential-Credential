@@ -53,24 +53,37 @@ project_root/
 │  ├─ app.py             # Main GUI logic
 │  └─ tray.py            # Optional system tray scaffold
 │
-└─ core/
-   ├─ __init__.py        
-   ├─ security.py        # EncryptionManager
-   ├─ audit.py           # Auto logging
-   ├─ backup.py          # Backup + restoration
-   ├─ cli.py             # CLI Integration
-   ├─ database.py        # JSON + SQLite + optional Postgres storage
-   ├─ configs.py         # Filesystem credential management
-   ├─ migration.py       # Filesystem → DB migration
-   ├─ validators.py      # Token validation helpers
-   ├─ expiry.py          # Token expiration heuristics
-   ├─ profiles.py        # Profile management
-   ├─ templates.py       # Provider templates
-   ├─ roles.py           # RBAC scaffold
-   ├─ generators.py      # JWT / GitHub app token helpers
-   ├─ scanner.py         # Secret scanning
-   ├─ crypto_advanced.py # Advanced cryptography utilities
-   └─ secure_memory.py   # Secure memory handling
+├─ core/
+│  ├─ __init__.py        
+│  ├─ security.py        # EncryptionManager
+│  ├─ audit.py           # Auto logging
+│  ├─ backup.py          # Backup + restoration
+│  ├─ cli.py             # CLI Integration
+│  ├─ database.py        # JSON + SQLite + optional Postgres storage
+│  ├─ configs.py         # Filesystem credential management
+│  ├─ migration.py       # Filesystem → DB migration
+│  ├─ validators.py      # Token validation helpers
+│  ├─ expiry.py          # Token expiration heuristics
+│  ├─ profiles.py        # Profile management
+│  ├─ templates.py       # Provider templates
+│  ├─ roles.py           # RBAC scaffold
+│  ├─ generators.py      # JWT / GitHub app token helpers
+│  ├─ scanner.py         # Secret scanning
+│  ├─ crypto_advanced.py # Advanced cryptography utilities
+│  └─ secure_memory.py   # Secure memory handling
+|
+└── rust_core/
+     ├── src/
+     │   ├── lib.rs
+     │   ├── security.rs
+     │   ├── database.rs
+     │   ├── secure_memory.rs
+     │   ├── crypto_advanced.rs
+     │   ├── scanners.rs
+     │   └── validators.rs
+     ├── Cargo.lock
+     ├── Cargo.toml
+     └── pyproject.toml
 ```
 
 ## Installation
