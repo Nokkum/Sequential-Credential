@@ -150,7 +150,7 @@ The wheel is automatically extracted to site-packages. Build takes ~6 minutes du
 
 ## Security Features
 ### Rust Advantages
-- **Memory Safety**: True memory protection with mlock() and automatic zeroization on drop
+- **Memory Safety**: True memory protection with `mlock()` and automatic zeroization on drop
 - **Argon2id**: More secure key derivation than PBKDF2 (65536KB memory, 3 iterations)
 - **AES-256-GCM**: Authenticated encryption with 12-byte random nonces
 - **No Silent Fallback**: Encryption errors propagate to caller instead of falling back to incompatible format
