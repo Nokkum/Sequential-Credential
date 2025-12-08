@@ -9,33 +9,33 @@
 
 ## Changes
 - ### Version 1.5
-- **secure_memory** - Memory protection with automatic zeroization and `mlock()` support
-- **scanner** - Fast secret scanning with regex patterns (Google API, OpenAI, GitHub, Discord tokens)
-- **security** - Encryption manager with Argon2id key derivation (upgraded from PBKDF2) and AES-256-GCM encryption
-- **crypto_advanced** - HKDF key derivation and AES key wrapping for per-provider keys
-- **database** - SQLite database operations with connection pooling
-- **validators** - API token validation for Discord, GitHub, OpenAI, Slack, and Stripe
-- **`secure_memory.py`** - Falls back to Python ctypes if Rust unavailable
-- **`scanner.py`** - Falls back to Python regex if Rust unavailable
-- **`security.py`** - Falls back to Python cryptography library if Rust unavailable
-- **`crypto_advanced.py`** - Falls back to Python HKDF if Rust unavailable
-- **`validators.py`** - Falls back to Python requests if Rust unavailable
+  - **secure_memory** - Memory protection with automatic zeroization and `mlock()` support
+  - **scanner** - Fast secret scanning with regex patterns (Google API, OpenAI, GitHub, Discord tokens)
+  - **security** - Encryption manager with Argon2id key derivation (upgraded from PBKDF2) and AES-256-GCM encryption
+  - **crypto_advanced** - HKDF key derivation and AES key wrapping for per-provider keys
+  - **database** - SQLite database operations with connection pooling
+  - **validators** - API token validation for Discord, GitHub, OpenAI, Slack, and Stripe
+  - **`secure_memory.py`** - Falls back to Python ctypes if Rust unavailable
+  - **`scanner.py`** - Falls back to Python regex if Rust unavailable
+  - **`security.py`** - Falls back to Python cryptography library if Rust unavailable
+  - **`crypto_advanced.py`** - Falls back to Python HKDF if Rust unavailable
+  - **`validators.py`** - Falls back to Python requests if Rust unavailable
 
 ## Features
-- **Master-Password Encryption**: All credentials are encrypted with a master password using modern cryptography (Fernet + PBKDF2).
-- **Flexible Storage**: Store credentials in local JSON + filesystem encrypted blobs or SQLite database. Optional Postgres support.
-- **Migration Utility**: Migrate existing filesystem-stored credentials into database blobs.
-- **GUI Interface**: Tkinter-based GUI with master-password prompt, save/load/delete operations, import/export, and migration support.
-- **Profile Management**: Manage multiple user profiles, each with independent credentials.
-- **RBAC Support**: Role-based access control scaffold for admin, standard, and readonly roles.
-- **Advanced Crypto**: Per-provider derived keys with AES key wrapping.
-- **Token Validation**: Built-in token checks for Discord, GitHub, and more.
-- **Clipboard Auto-Wipe**: Securely copy credentials to clipboard with automatic clearing.
-- **Secret Scanner**: Scan text or files for sensitive information like API keys and tokens.
-- **Extensible Templates**: Provider templates for standardized credential entry.
-- **Audit Logging**: Tracks all actions performed within the credential manager, such as creating, updating, or deleting credentials and profiles. Logs are timestamped, encrypted, and can be filtered for easy review.
-- **Backup & Restore**: Provides encrypted backup and restore functionality for credentials and configurations. Supports exporting/importing JSON + DB blobs, validating integrity, and securely merging backups with existing data.
-- **Command-Line Interface**: Enables full headless access to the credential manager. Users can add, update, delete, list, export, import credentials, switch profiles, and perform filesystem-to-DB migration entirely from the terminal.
+  - **Master-Password Encryption**: All credentials are encrypted with a master password using modern cryptography.
+  - **Flexible Storage**: Store credentials in local JSON + filesystem encrypted blobs or SQLite database. Optional Postgres support.
+  - **Migration Utility**: Migrate existing filesystem-stored credentials into database blobs.
+  - **GUI Interface**: Tkinter-based GUI with master-password prompt, save/load/delete operations, import/export, and migration support.
+  - **Profile Management**: Manage multiple user profiles, each with independent credentials.
+  - **RBAC Support**: Role-based access control scaffold for admin, standard, and readonly roles.
+  - **Advanced Crypto**: Per-provider derived keys with AES key wrapping.
+  - **Token Validation**: Built-in token checks for Discord, GitHub, and more.
+  - **Clipboard Auto-Wipe**: Securely copy credentials to clipboard with automatic clearing.
+  - **Secret Scanner**: Scan text or files for sensitive information like API keys and tokens.
+  - **Extensible Templates**: Provider templates for standardized credential entry.
+  - **Audit Logging**: Tracks all actions performed within the credential manager, such as creating, updating, or deleting credentials and profiles. Logs are timestamped, encrypted, and can be filtered for easy review.
+  - **Backup & Restore**: Provides encrypted backup and restore functionality for credentials and configurations. Supports exporting/importing JSON + DB blobs, validating integrity, and securely merging backups with existing data.
+  - **Command-Line Interface**: Enables full headless access to the credential manager. Users can add, update, delete, list, export, import credentials, switch profiles, and perform filesystem-to-DB migration entirely from the terminal.
 
 ## Directory Structure
 ```
